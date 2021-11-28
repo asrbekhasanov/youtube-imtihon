@@ -1,25 +1,12 @@
-import './App.css';
-import { Routes, Route, NavLink } from 'react-router-dom';
-import About from './Components/Pages/About/About'
-import Home from './Components/Pages/Home/Home'
+import './App.scss';
+import LeftSideBar from './Components/LeftSideBar/LeftSideBar';
 
 function App() {
   return (
     <>
-      <nav>
-        <ul>
-          <li>
-            <NavLink to='/'>Home</NavLink>
-          </li>
-          <li>
-            <NavLink to='/about'>About</NavLink>
-          </li>
-        </ul>
-      </nav>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-      </Routes>
+      <div className="container">
+        <LeftSideBar/>  
+      </div>
     </>
   );
 }
